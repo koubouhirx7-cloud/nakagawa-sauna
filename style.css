@@ -137,6 +137,14 @@ ul {
   max-width: 800px;
   padding: 0 20px;
   z-index: 1;
+  pointer-events: none; /* Make content pass-through so slider can be swiped */
+}
+
+/* Ensure buttons and links are clickable */
+.hero-content a,
+.hero-content button,
+.btn-primary {
+  pointer-events: auto;
 }
 
 .hero-subtitle {

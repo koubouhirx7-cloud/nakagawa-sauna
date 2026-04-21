@@ -24,22 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Swiper
   const heroSwiper = new Swiper('.hero-gallery', {
     loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
-      el:('.swiper-pagination'),
+      el: '.swiper-pagination',
       clickable: true,
     },
     breakpoints: {
-      769: {
-        slidesPerView: 2,
-        allowTouchMove: false, // Prevent swiping on desktop
-      },
       0: {
+        enabled: true,
         slidesPerView: 1,
-        allowTouchMove: true, // Enable swiping on mobile
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        }
+        allowTouchMove: true,
+      },
+      769: {
+        enabled: false,
+        slidesPerView: 2,
+        allowTouchMove: false,
       }
     }
   });
