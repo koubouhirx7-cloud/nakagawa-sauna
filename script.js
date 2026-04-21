@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Swiper
   const heroSwiper = new Swiper('.hero-gallery', {
-    loop: false,
+    loop: true,
     pagination: {
       el:('.swiper-pagination'),
       clickable: true,
